@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/abhishekunotech/Hydra-Pearls/utils"
+    "github.com/abhishekunotech/Hydra-Pearls/utils"
 	"net/http"
 )
 
@@ -15,6 +15,6 @@ func (h *Handler) GetTicketsPerPageDropdown(w http.ResponseWriter, r *http.Reque
 	actionStrg := utils.RequestAbstractGet1(r)
 	configStrg := "components.otrs"
 	uriStrg := "components.otrs.apis.GetTicketsPerPageDropdown"
-	utils.ResponseAbstract(utils.ExecuteCallGet(configStrg,uriStrg,actionStrg),w)
+    utils.ResponseAbstract(utils.ExecuteCallGet1(configStrg,uriStrg,actionStrg),w)
 
 }
